@@ -54,7 +54,7 @@ nav .logo {
 /* Ensure Navigation is Always in One Row on Mobile */
 @media screen and (max-width: 768px) {
     nav {
-        flex-direction: column;
+        flex-direction: row;
         align-items: center;
     }
     
