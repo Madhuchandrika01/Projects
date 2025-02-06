@@ -28,6 +28,7 @@ nav .logo {
     display: flex;
     list-style: none;
     gap: 20px;
+    padding: 0;
 }
 
 .nav-links a {
@@ -41,42 +42,40 @@ nav .logo {
     color: yellow;
 }
 
-/* Mobile Menu Toggle */
+/* Remove Mobile Menu Toggle Button */
 .menu-toggle {
-    display: none;
-    cursor: pointer;
-    font-size: 24px;
-    color: white;
+    display: none !important;
 }
 
-/* Responsive Menu */
+/* Ensure Navigation is Always Visible on Mobile */
 @media screen and (max-width: 768px) {
-    .menu-toggle {
-        display: block;
-    }
-
     .nav-links {
-        display: none;
+        display: flex !important;
         flex-direction: column;
         background: #0B1629;
         width: 100%;
-        position: absolute;
-        top: 60px;
-        left: 0;
+        position: relative;
         text-align: center;
         padding: 10px 0;
-        
-    }
-
-    .nav-links.active {
-        display: flex;
     }
 
     .nav-links li {
+        display: block;
         margin: 10px 0;
     }
-}
 
+    .nav-links a {
+        display: block;
+        color: white;
+        font-size: 18px;
+        text-decoration: none;
+        padding: 10px;
+    }
+
+    .nav-links a:hover {
+        color: yellow;
+    }
+}
 
 /* Fixes for about, projects, experience, and contact sections remain the same */
 
