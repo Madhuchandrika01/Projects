@@ -6,49 +6,43 @@
 }
 
 /* Navigation Bar */
+/* NAVIGATION BAR FIX */
 nav {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between; /* Ensures name and links stay apart */
     align-items: center;
     background-color: #0B1629;
-    padding: 15px 20px;
+    padding: 15px 50px;
     font-family: 'Courier New', Courier, monospace;
-    position: relative;
-    width: 100%;
-    flex-wrap: nowrap;
-    overflow-x: auto; /* Enables scrolling if needed */
+    flex-wrap: wrap; /* Allows wrapping in smaller screens */
 }
 
-/* Logo */
+/* LOGO STYLING */
 nav .logo {
     font-size: 20px;
     font-weight: bold;
     color: yellow;
     text-transform: uppercase;
-    white-space: nowrap; /* Prevents logo from breaking */
+    letter-spacing: 2px;
+    flex-grow: 1; /* Pushes nav-links to the right */
+    text-align: left; /* Ensures it's aligned left */
 }
 
-/* Navigation Links */
+/* NAVIGATION LINKS */
 .nav-links {
     display: flex;
+    gap: 30px; /* Adds space between links */
     list-style: none;
-    gap: 15px;
-    padding: 0;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: nowrap; /* Prevents breaking into multiple lines */
-    white-space: nowrap; /* Ensures text doesn't wrap */
-    overflow-x: auto; /* Enables scrolling if links don’t fit */
+    text-align: center;
 }
 
-/* Navigation Link Styles */
+/* INDIVIDUAL LINK STYLING */
 .nav-links a {
     text-decoration: none;
     font-size: 16px;
     color: white;
     transition: color 0.3s;
-    padding: 10px 15px;
-    display: inline-block;
+    padding: 10px 15px; /* Adds padding */
 }
 
 /* Hover Effect */
@@ -56,27 +50,25 @@ nav .logo {
     color: yellow;
 }
 
-/* Ensure Navigation Stays in One Row on Mobile */
+/* MOBILE VIEW FIX */
 @media screen and (max-width: 768px) {
     nav {
-        display: flex;
-        flex-direction: row; /* Keeps everything in a row */
+        flex-direction: column; /* Stack logo and nav links */
         align-items: center;
-        justify-content: center;
+    }
+
+    .logo {
+        text-align: center; /* Center the name */
         width: 100%;
-        overflow-x: auto;
-        flex-wrap: nowrap;
+        margin-bottom: 10px;
     }
 
     .nav-links {
-        flex-direction: row; /* Ensures items stay in a row */
-        flex-wrap: nowrap; /* Prevents wrapping */
-        justify-content: center; /* Centers items */
-        width: auto;
-        overflow-x: auto; /* Enables horizontal scrolling */
+        flex-direction: row; /* Keeps links in one row */
+        flex-wrap: wrap; /* Allows them to break into multiple lines */
+        justify-content: center; /* Centers the links */
     }
 }
-
 
 
 
