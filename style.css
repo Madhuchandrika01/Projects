@@ -1,9 +1,4 @@
 /* General Reset */
-html, body {
-    max-width: 100%;
-    overflow-x: hidden;
-}
-
 * {
     margin: 0;
     padding: 0;
@@ -18,16 +13,14 @@ nav {
     background-color: #0B1629;
     padding: 15px 50px;
     font-family: 'Courier New', Courier, monospace;
-    width: 100%;
+    position: relative;
 }
 
-/* Logo */
 nav .logo {
     font-size: 20px;
     font-weight: bold;
     color: yellow;
     text-transform: uppercase;
-    letter-spacing: 2px;
 }
 
 /* Navigation Links */
@@ -48,40 +41,41 @@ nav .logo {
     color: yellow;
 }
 
-/* Menu Toggle (Hamburger Button) */
+/* Mobile Menu Toggle */
 .menu-toggle {
     display: none;
+    cursor: pointer;
     font-size: 24px;
     color: white;
-    cursor: pointer;
 }
 
-/* Mobile Responsive Menu */
+/* Responsive Menu */
 @media screen and (max-width: 768px) {
     .menu-toggle {
-        display: block; /* Show the hamburger menu button */
+        display: block;
     }
 
     .nav-links {
-        display: none; /* Hide menu initially */
+        display: none;
         flex-direction: column;
-        position: absolute;
-        top: 60px;
-        right: 0;
         background: #0B1629;
         width: 100%;
+        position: absolute;
+        top: 60px;
+        left: 0;
         text-align: center;
         padding: 10px 0;
     }
 
     .nav-links.active {
-        display: flex; /* Show menu when active */
+        display: flex;
     }
 
     .nav-links li {
         margin: 10px 0;
     }
 }
+
 
 /* Fixes for about, projects, experience, and contact sections remain the same */
 
