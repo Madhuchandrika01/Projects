@@ -51,12 +51,8 @@ nav .logo {
 
 /* Responsive Menu */
 @media screen and (max-width: 768px) {
-    .menu-toggle {
-        display: block;
-    }
-
     .nav-links {
-        display: none;
+        display: none; /* Initially hidden */
         flex-direction: column;
         background: #0B1629;
         width: 100%;
@@ -65,17 +61,18 @@ nav .logo {
         left: 0;
         text-align: center;
         padding: 10px 0;
-        
+        transition: all 0.3s ease-in-out;
+        z-index: 1000; /* Ensure it's on top */
     }
 
     .nav-links.active {
-        display: flex;
-    }
-
-    .nav-links li {
-        margin: 10px 0;
+        display: flex !important; /* Override hidden state */
+        opacity: 1;
+        visibility: visible;
+        transition: all 0.3s ease-in-out;
     }
 }
+
 
 
 /* Fixes for about, projects, experience, and contact sections remain the same */
