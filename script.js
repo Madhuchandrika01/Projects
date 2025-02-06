@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-    const menuToggle = document.querySelector("#menu-toggle"); // FIXED ID
+    const menuToggle = document.querySelector("#mobile-menu");
     const navLinks = document.querySelector(".nav-links");
 
     if (menuToggle && navLinks) {
@@ -8,4 +8,3 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 });
-
