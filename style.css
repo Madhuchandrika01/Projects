@@ -15,8 +15,7 @@ nav {
     font-family: 'Courier New', Courier, monospace;
     position: relative;
     width: 100%;
-    flex-wrap: nowrap; /* Prevents breaking */
-    overflow-x: auto; /* Allows scrolling if needed */
+    flex-wrap: nowrap;
 }
 
 /* Logo */
@@ -32,14 +31,12 @@ nav .logo {
 .nav-links {
     display: flex;
     list-style: none;
-    gap: 10px;
+    gap: 15px;
     padding: 0;
-    flex-wrap: nowrap;
-    justify-content: flex-start; /* Keeps links in one row */
+    justify-content: center; /* Keeps it centered on desktop */
     align-items: center;
-    width: 100%;
-    overflow-x: auto; /* Allows scrolling if links don’t fit */
-    white-space: nowrap; /* Prevents wrapping */
+    width: auto;
+    flex-wrap: nowrap; /* Prevents breaking into multiple lines */
 }
 
 /* Navigation Link Styles */
@@ -49,7 +46,7 @@ nav .logo {
     color: white;
     transition: color 0.3s;
     padding: 10px 15px;
-    display: inline-block;
+    white-space: nowrap; /* Prevents text from wrapping */
 }
 
 /* Hover Effect */
@@ -60,21 +57,19 @@ nav .logo {
 /* Ensure Navigation Stays in One Row on Mobile */
 @media screen and (max-width: 768px) {
     nav {
-        display: flex;
-        flex-direction: row;
+        flex-direction: column; /* Keeps logo and links aligned */
         align-items: center;
-        justify-content: space-between;
+        justify-content: center;
+        text-align: center;
         width: 100%;
-        overflow-x: auto;
-        flex-wrap: nowrap;
     }
 
     .nav-links {
         flex-direction: row; /* Ensures items stay in a row */
         flex-wrap: nowrap; /* Prevents wrapping */
-        justify-content: flex-start; /* Keeps layout structured */
+        justify-content: center; /* Centers items */
         width: auto;
-        overflow-x: auto;
+        overflow-x: auto; /* Allows scrolling if needed */
     }
 }
 
