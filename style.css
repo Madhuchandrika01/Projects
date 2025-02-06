@@ -14,7 +14,7 @@ nav {
     padding: 15px 20px;
     font-family: 'Courier New', Courier, monospace;
     position: relative;
-    flex-wrap: wrap; /* Ensure items wrap if needed */
+    flex-wrap: wrap;
 }
 
 /* Logo */
@@ -31,9 +31,10 @@ nav .logo {
     list-style: none;
     gap: 15px;
     padding: 0;
-    flex-wrap: wrap;
-    justify-content: center; /* Center items on smaller screens */
+    flex-wrap: nowrap;
+    justify-content: center;
     align-items: center;
+    width: 100%;
 }
 
 /* Navigation Link Styles */
@@ -43,7 +44,7 @@ nav .logo {
     color: white;
     transition: color 0.3s;
     padding: 10px 15px;
-    white-space: nowrap; /* Prevents wrapping inside items */
+    white-space: nowrap;
 }
 
 /* Hover Effect */
@@ -56,19 +57,16 @@ nav .logo {
     nav {
         flex-direction: row;
         align-items: center;
+        justify-content: center;
     }
-    
     .nav-links {
         flex-direction: row;
-        flex-wrap: nowrap; /* Prevent links from stacking */
+        flex-wrap: nowrap;
         justify-content: center;
-        width: 100%;
-    }
-
-    .nav-links li {
-        margin: 0;
+        width: auto;
     }
 }
+
 
 
 /* Fixes for about, projects, experience, and contact sections remain the same */
