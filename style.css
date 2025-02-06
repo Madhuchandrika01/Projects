@@ -32,13 +32,14 @@ nav .logo {
 .nav-links {
     display: flex;
     list-style: none;
-    gap: 15px;
+    gap: 10px;
     padding: 0;
     justify-content: center;
     align-items: center;
     flex-wrap: nowrap;
     white-space: nowrap;
     width: 100%;
+    overflow-x: auto;
 }
 
 /* Navigation Link Styles */
@@ -47,8 +48,9 @@ nav .logo {
     font-size: 16px;
     color: white;
     transition: color 0.3s;
-    padding: 10px 15px;
+    padding: 10px;
     display: inline-block;
+    white-space: nowrap;
 }
 
 /* Hover Effect */
@@ -67,9 +69,10 @@ nav .logo {
         flex-direction: row;
         flex-wrap: nowrap;
         justify-content: center;
-        width: auto;
+        width: 100%;
         overflow-x: auto;
         -webkit-overflow-scrolling: touch;
+        gap: 5px;
     }
 }
 
