@@ -6,43 +6,51 @@
 }
 
 /* Navigation Bar */
-/* NAVIGATION BAR FIX */
 nav {
     display: flex;
-    justify-content: space-between; /* Ensures name and links stay apart */
+    justify-content: space-between;
     align-items: center;
     background-color: #0B1629;
-    padding: 15px 50px;
+    padding: 15px 20px;
     font-family: 'Courier New', Courier, monospace;
-    flex-wrap: wrap; /* Allows wrapping in smaller screens */
+    position: relative;
+    width: 100%;
+    flex-wrap: nowrap;
+    overflow-x: auto; /* Enables horizontal scrolling if needed */
+    white-space: nowrap;
 }
 
-/* LOGO STYLING */
+/* Logo */
 nav .logo {
     font-size: 20px;
     font-weight: bold;
     color: yellow;
     text-transform: uppercase;
-    letter-spacing: 2px;
-    flex-grow: 1; /* Pushes nav-links to the right */
-    text-align: left; /* Ensures it's aligned left */
+    white-space: nowrap; /* Prevents logo from breaking */
 }
 
-/* NAVIGATION LINKS */
+/* Navigation Links */
 .nav-links {
     display: flex;
-    gap: 30px; /* Adds space between links */
     list-style: none;
-    text-align: center;
+    gap: 15px;
+    padding: 0;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap; /* Prevents wrapping */
+    white-space: nowrap; /* Ensures text stays in one row */
+    overflow-x: auto; /* Enables scrolling */
+    width: 100%;
 }
 
-/* INDIVIDUAL LINK STYLING */
+/* Navigation Link Styles */
 .nav-links a {
     text-decoration: none;
     font-size: 16px;
     color: white;
     transition: color 0.3s;
-    padding: 10px 15px; /* Adds padding */
+    padding: 10px 15px;
+    display: inline-block;
 }
 
 /* Hover Effect */
@@ -50,23 +58,26 @@ nav .logo {
     color: yellow;
 }
 
-/* MOBILE VIEW FIX */
+/* Force Navigation to Stay in One Row on Mobile */
 @media screen and (max-width: 768px) {
     nav {
-        flex-direction: column; /* Stack logo and nav links */
+        display: flex;
+        flex-direction: row;
         align-items: center;
-    }
-
-    .logo {
-        text-align: center; /* Center the name */
+        justify-content: center;
         width: 100%;
-        margin-bottom: 10px;
+        flex-wrap: nowrap;
+        overflow-x: auto; /* Forces horizontal scrolling */
+        -webkit-overflow-scrolling: touch; /* Improves mobile scrolling */
     }
 
     .nav-links {
-        flex-direction: row; /* Keeps links in one row */
-        flex-wrap: wrap; /* Allows them to break into multiple lines */
-        justify-content: center; /* Centers the links */
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: center;
+        width: max-content; /* Prevents it from shrinking */
+        overflow-x: auto; /* Enables scrolling */
+        -webkit-overflow-scrolling: touch; /* Ensures smooth scrolling */
     }
 }
 
