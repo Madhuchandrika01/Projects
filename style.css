@@ -273,11 +273,8 @@ nav .logo {
     line-height: 1.5;
     margin-bottom: 20px;
 }
-.experience-page-wrapper {
-    display: flex;
-    flex-direction: column;
-    min-height: 300vh;
-}
+
+
 /* Projects Section */
 .projects {
     padding: 100px 10%;
@@ -306,11 +303,17 @@ nav .logo {
     color: #A8B2D1;
 }
 
-.project-page-wrapper {
-    display: flex;
-    flex-direction: column;
-    min-height: 300vh;
+.experience, .projects {
+    min-height: auto; /* Prevent forcing height */
+    padding-bottom: 50px; /* Add proper spacing */
 }
+
+@media screen and (min-width: 768px) {
+    .experience, .projects {
+        padding-bottom: 80px; /* Adjust padding for larger screens */
+    }
+}
+
 /* Contact Section */
 .contact-section {
     padding: 40px 10%;

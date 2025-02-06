@@ -1,9 +1,9 @@
-document.addEventListener("DOMContentLoaded", () => {
-    const menuToggle = document.querySelector("#mobile-menu"); // Change from .menu-toggle to #mobile-menu
+document.addEventListener("DOMContentLoaded", function () {
+    const menuToggle = document.getElementById("mobile-menu");
     const navLinks = document.querySelector(".nav-links");
 
-    if (menuToggle && navLinks) { // Ensure both elements exist
-        menuToggle.addEventListener("click", () => {
+    if (menuToggle && navLinks) {
+        menuToggle.addEventListener("click", function () {
             navLinks.classList.toggle("active");
         });
     }
