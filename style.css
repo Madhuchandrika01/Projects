@@ -273,7 +273,11 @@ nav .logo {
     line-height: 1.5;
     margin-bottom: 20px;
 }
-
+.experience-page-wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 300vh;
+}
 /* Projects Section */
 .projects {
     padding: 100px 10%;
@@ -302,6 +306,11 @@ nav .logo {
     color: #A8B2D1;
 }
 
+.project-page-wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 300vh;
+}
 /* Contact Section */
 .contact-section {
     padding: 40px 10%;
