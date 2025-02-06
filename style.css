@@ -51,11 +51,11 @@ nav .logo {
 @media screen and (max-width: 768px) {
     .nav-links {
         display: flex !important;
-        flex-direction: column;
+        flex-direction: row;
         background: #0B1629;
         width: 100%;
         position: relative;
-        text-align: center;
+        text-align: right;
         padding: 10px 0;
     }
 
@@ -303,10 +303,7 @@ nav .logo {
     color: #A8B2D1;
 }
 
-.experience, .projects {
-    min-height: auto; /* Prevent forcing height */
-    padding-bottom: 50px; /* Add proper spacing */
-}
+
 
 @media screen and (min-width: 768px) {
     .experience, .projects {
