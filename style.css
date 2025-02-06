@@ -52,7 +52,7 @@ nav .logo {
 /* Responsive Menu */
 @media screen and (max-width: 768px) {
     .nav-links {
-        display: none; /* Initially hidden */
+        display: none;
         flex-direction: column;
         background: #0B1629;
         width: 100%;
@@ -62,17 +62,16 @@ nav .logo {
         text-align: center;
         padding: 10px 0;
         transition: all 0.3s ease-in-out;
-        z-index: 1000; /* Ensure it's on top */
+        z-index: 1000;
     }
 
     .nav-links.active {
-        display: flex !important; /* Override hidden state */
+        display: flex !important;
         opacity: 1;
         visibility: visible;
         transition: all 0.3s ease-in-out;
     }
 }
-
 
 
 /* Fixes for about, projects, experience, and contact sections remain the same */
@@ -416,4 +415,9 @@ footer {
         flex-direction: column;
         align-items: center;
     }
+}
+
+.nav-links {
+    display: block !important;  /* Force menu to be always visible */
+    background: red;  /* Temporary background to check visibility */
 }
