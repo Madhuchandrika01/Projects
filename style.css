@@ -1,7 +1,7 @@
 /* General Reset */
 html, body {
     max-width: 100%;
-    overflow-x: hidden; /* Prevent horizontal scrolling */
+    overflow-x: hidden;
 }
 
 * {
@@ -10,8 +10,7 @@ html, body {
     box-sizing: border-box;
 }
 
-/* Navigation Bar Styling */
-/* Navigation Bar Styling */
+/* Navigation Bar */
 nav {
     display: flex;
     justify-content: space-between;
@@ -19,12 +18,10 @@ nav {
     background-color: #0B1629;
     padding: 15px 50px;
     font-family: 'Courier New', Courier, monospace;
-    max-width: 100%;
-    overflow-x: hidden; /* Prevents horizontal scrolling */
-    flex-wrap: nowrap; /* Allows wrapping for smaller screens */
+    width: 100%;
 }
 
-
+/* Logo */
 nav .logo {
     font-size: 20px;
     font-weight: bold;
@@ -33,47 +30,60 @@ nav .logo {
     letter-spacing: 2px;
 }
 
-/* Ensure nav links stay in a row */
-/* Ensure nav links stay in a row */
+/* Navigation Links */
 .nav-links {
     display: flex;
-    flex-wrap: nowrap;  /* Prevents breaking into multiple lines */
-    justify-content: center; /* Centers links */
-    gap: 15px;
     list-style: none;
-    padding: 0;
-    white-space: nowrap; /* Prevents text from wrapping */
+    gap: 20px;
 }
 
-/* Mobile Responsive Fix */
-@media screen and (max-width: 768px) {
-    .nav-links {
-        display: flex;
-        flex-direction: row;  /* Forces links to stay in one line */
-        justify-content: center;
-        align-items: center;
-        gap: 10px;
-        overflow-x: auto; /* Allows scrolling if needed */
-        white-space: nowrap; /* Prevents wrapping */
-    }
-
-    .nav-links a {
-        padding: 10px;
-        white-space: nowrap; /* Ensures text doesn't wrap */
-        font-size: 14px; /* Adjusts font size for smaller screens */
-    }
-}
-
-/* Ensure nav links are white */
 .nav-links a {
-    color: white;
     text-decoration: none;
     font-size: 16px;
+    color: white;
+    transition: color 0.3s;
 }
 
 .nav-links a:hover {
     color: yellow;
 }
+
+/* Menu Toggle (Hamburger Button) */
+.menu-toggle {
+    display: none;
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+}
+
+/* Mobile Responsive Menu */
+@media screen and (max-width: 768px) {
+    .menu-toggle {
+        display: block; /* Show the hamburger menu button */
+    }
+
+    .nav-links {
+        display: none; /* Hide menu initially */
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background: #0B1629;
+        width: 100%;
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    .nav-links.active {
+        display: flex; /* Show menu when active */
+    }
+
+    .nav-links li {
+        margin: 10px 0;
+    }
+}
+
+/* Fixes for about, projects, experience, and contact sections remain the same */
 
 
 /* Hero Section */
