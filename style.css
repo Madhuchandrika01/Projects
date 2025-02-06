@@ -16,6 +16,7 @@ nav {
     position: relative;
     width: 100%;
     flex-wrap: nowrap;
+    overflow-x: auto; /* Enables scrolling if needed */
 }
 
 /* Logo */
@@ -33,10 +34,11 @@ nav .logo {
     list-style: none;
     gap: 15px;
     padding: 0;
-    justify-content: center; /* Keeps it centered on desktop */
+    justify-content: center;
     align-items: center;
-    width: auto;
     flex-wrap: nowrap; /* Prevents breaking into multiple lines */
+    white-space: nowrap; /* Ensures text doesn't wrap */
+    overflow-x: auto; /* Enables scrolling if links don’t fit */
 }
 
 /* Navigation Link Styles */
@@ -46,7 +48,7 @@ nav .logo {
     color: white;
     transition: color 0.3s;
     padding: 10px 15px;
-    white-space: nowrap; /* Prevents text from wrapping */
+    display: inline-block;
 }
 
 /* Hover Effect */
@@ -57,11 +59,13 @@ nav .logo {
 /* Ensure Navigation Stays in One Row on Mobile */
 @media screen and (max-width: 768px) {
     nav {
-        flex-direction: column; /* Keeps logo and links aligned */
+        display: flex;
+        flex-direction: row; /* Keeps everything in a row */
         align-items: center;
         justify-content: center;
-        text-align: center;
         width: 100%;
+        overflow-x: auto;
+        flex-wrap: nowrap;
     }
 
     .nav-links {
@@ -69,9 +73,10 @@ nav .logo {
         flex-wrap: nowrap; /* Prevents wrapping */
         justify-content: center; /* Centers items */
         width: auto;
-        overflow-x: auto; /* Allows scrolling if needed */
+        overflow-x: auto; /* Enables horizontal scrolling */
     }
 }
+
 
 
 
