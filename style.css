@@ -8,14 +8,13 @@
 /* Navigation Bar */
 nav {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
     align-items: center;
     background-color: #0B1629;
     padding: 15px 20px;
     font-family: 'Courier New', Courier, monospace;
     position: relative;
     width: 100%;
-    flex-wrap: nowrap;
 }
 
 /* Logo */
@@ -26,7 +25,7 @@ nav .logo {
     text-transform: uppercase;
     white-space: nowrap;
     text-align: center;
-    width: 100%;
+    margin-bottom: 10px;
 }
 
 /* Navigation Links */
@@ -60,17 +59,17 @@ nav .logo {
 /* Ensure Navigation Stays in One Row on Mobile */
 @media screen and (max-width: 768px) {
     nav {
-        display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        width: 100%;
     }
     .nav-links {
         flex-direction: row;
         flex-wrap: nowrap;
         justify-content: center;
-        width: 100%;
+        width: auto;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
     }
 }
 
