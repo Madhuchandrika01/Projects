@@ -421,3 +421,16 @@ footer {
     display: block !important;  /* Force menu to be always visible */
     background: red;  /* Temporary background to check visibility */
 }
+
+@media screen and (max-width: 768px) {
+    .nav-links {
+        display: flex !important; /* Ensure menu is shown */
+        background: red; /* Keep red temporarily for testing */
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        z-index: 1000; /* Ensure it's above everything */
+    }
+}
