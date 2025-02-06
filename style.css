@@ -14,8 +14,9 @@ nav {
     padding: 15px 20px;
     font-family: 'Courier New', Courier, monospace;
     position: relative;
-    flex-wrap: wrap;
     width: 100%;
+    flex-wrap: nowrap; /* Prevents breaking */
+    overflow-x: auto; /* Allows scrolling if needed */
 }
 
 /* Logo */
@@ -24,21 +25,21 @@ nav .logo {
     font-weight: bold;
     color: yellow;
     text-transform: uppercase;
-    white-space: nowrap; /* Ensures logo does not break */
+    white-space: nowrap; /* Prevents logo from breaking */
 }
 
 /* Navigation Links */
 .nav-links {
     display: flex;
     list-style: none;
-    gap: 15px;
+    gap: 10px;
     padding: 0;
     flex-wrap: nowrap;
-    justify-content: center;
+    justify-content: flex-start; /* Keeps links in one row */
     align-items: center;
     width: 100%;
-    min-width: max-content; /* Ensures it doesn’t shrink */
-    overflow-x: auto; /* Allows horizontal scrolling if needed */
+    overflow-x: auto; /* Allows scrolling if links don’t fit */
+    white-space: nowrap; /* Prevents wrapping */
 }
 
 /* Navigation Link Styles */
@@ -48,7 +49,7 @@ nav .logo {
     color: white;
     transition: color 0.3s;
     padding: 10px 15px;
-    white-space: nowrap; /* Prevents wrapping */
+    display: inline-block;
 }
 
 /* Hover Effect */
@@ -56,26 +57,27 @@ nav .logo {
     color: yellow;
 }
 
-/* Ensure Navigation is Always in One Row on Mobile */
+/* Ensure Navigation Stays in One Row on Mobile */
 @media screen and (max-width: 768px) {
     nav {
         display: flex;
         flex-direction: row;
         align-items: center;
-        justify-content: center;
+        justify-content: space-between;
         width: 100%;
+        overflow-x: auto;
+        flex-wrap: nowrap;
     }
 
     .nav-links {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: nowrap;
-        justify-content: center;
+        flex-direction: row; /* Ensures items stay in a row */
+        flex-wrap: nowrap; /* Prevents wrapping */
+        justify-content: flex-start; /* Keeps layout structured */
         width: auto;
-        overflow-x: auto; /* Allows scrolling if needed */
-        padding: 10px;
+        overflow-x: auto;
     }
 }
+
 
 
 /* Fixes for about, projects, experience, and contact sections remain the same */
