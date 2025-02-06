@@ -65,7 +65,7 @@ nav .logo {
         left: 0;
         text-align: center;
         padding: 10px 0;
-        z-index: 1000;
+        
     }
 
     .nav-links.active {
