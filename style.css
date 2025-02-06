@@ -51,6 +51,10 @@ nav .logo {
 
 /* Responsive Menu */
 @media screen and (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+
     .nav-links {
         display: none;
         flex-direction: column;
@@ -61,15 +65,15 @@ nav .logo {
         left: 0;
         text-align: center;
         padding: 10px 0;
-        transition: all 0.3s ease-in-out;
-        z-index: 1000;
+        
     }
 
     .nav-links.active {
-        display: flex !important;
-        opacity: 1;
-        visibility: visible;
-        transition: all 0.3s ease-in-out;
+        display: flex;
+    }
+
+    .nav-links li {
+        margin: 10px 0;
     }
 }
 
@@ -414,23 +418,5 @@ footer {
     .contact-container {
         flex-direction: column;
         align-items: center;
-    }
-}
-
-.nav-links {
-    display: block !important;  /* Force menu to be always visible */
-    background: red;  /* Temporary background to check visibility */
-}
-
-@media screen and (max-width: 768px) {
-    .nav-links {
-        display: flex !important; /* Ensure menu is shown */
-        background: red; /* Keep red temporarily for testing */
-        position: absolute;
-        top: 60px;
-        left: 0;
-        width: 100%;
-        text-align: center;
-        z-index: 1000; /* Ensure it's above everything */
     }
 }
